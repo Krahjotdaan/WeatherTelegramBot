@@ -3,102 +3,67 @@ import requests
 from config import WEATHER_API_KEY
 
 
-def get_location_key(city):
-    """
-    Retrieves the location key from AccuWeather API using city name.
+def get_location_keys(cities: list):
+    location_keys = []
 
-    Args:
-        city: name of the city
+    for city in cities:
+        url = f"http://dataservice.accuweather.com/locations/v1/cities/search?q={city}&apikey={WEATHER_API_KEY}"
+        response = requests.get(url)
+        response.raise_for_status() 
+        data = response.json()
 
-    Returns:
-        The location key.
+        location_keys.append(int(data[0]['Key']))
 
-    Raises:
-        requests.exceptions.HTTPError: If the API request fails.
-    """
-
-    url = f"http://dataservice.accuweather.com/locations/v1/cities/search?q={city}&apikey={WEATHER_API_KEY}"
-    response = requests.get(url)
-    response.raise_for_status() 
-    data = response.json()
-
-    return data[0]['Key']
+    return location_keys
 
 
-def get_current_weather_data(location_key):
-    """
-    Retrieves current weather data from AccuWeather API using a location key.
+def get_current_weather(location_keys: list):
+    current_weather = []
 
-    Args:
-        location_key: The location key obtained from get_location_key().
+    for location_key in location_keys:
+        url = f"http://dataservice.accuweather.com/currentconditions/v1/{location_key}?apikey={WEATHER_API_KEY}&details=true"
+        response = requests.get(url)
+        response.raise_for_status()
+        data = response.json()
 
-    Returns:
-        A dictionary containing the weather data.
+        current_weather.append(data)
 
-    Raises:
-        requests.exceptions.HTTPError: If the API request fails.
-    """
-    
-    url = f"http://dataservice.accuweather.com/currentconditions/v1/{location_key}?apikey={WEATHER_API_KEY}&details=true"
-    response = requests.get(url)
-    response.raise_for_status()
-    data = response.json()
-
-    return data
+    return current_weather
 
 
-def get_main_params(data: dict):
-    """
-    Extracts and formats key weather parameters from a dictionary.
+def get_1day_forecast(location_keys):
+    day1_forecast = []
 
-    Args:
-        data: A dictionary containing raw weather data.  Assumed to have keys 
-              like "Temperature", "RealFeelTemperature", "WeatherText", etc.
+    for location_key in location_keys:
+        url = f"http://dataservice.accuweather.com/forecasts/v1/daily/1day/{location_key}?apikey={WEATHER_API_KEY}&details=true"
+        response = requests.get(url)
+        response.raise_for_status()
+        data = response.json()
 
-    Returns:
-        A dictionary containing formatted weather parameters: temp, feel_temp, 
-        weather_text, precipitation, humidity, wind_speed, direction, pressure.
-    """
+        day1_forecast.append(data)
 
-    main_params = {}
-
-    main_params["temp"] = data["Temperature"]["Metric"]["Value"]
-    main_params["feel_temp"] = data["RealFeelTemperature"]["Metric"]["Value"]
-    main_params["weather_text"] = data["WeatherText"]
-    main_params["precipitation"] = data["HasPrecipitation"]
-    main_params["humidity"] = data["RelativeHumidity"]
-    main_params["wind_speed"] = round(data["Wind"]["Speed"]["Metric"]["Value"] * 1000 / 3600, 1)
-    main_params["direction"] = data["Wind"]["Direction"]["English"]
-    main_params["pressure"] = round(data["Pressure"]["Metric"]["Value"] * 100 * 0.007501, 0)
-
-    return main_params
+    return day1_forecast
 
 
-def get_result_str(main_params: dict):
-    """
-    Generates a formatted string summarizing weather conditions.
+def get_3days_forecast(location_keys):
+    day3_forecast = []
 
-    Args:
-        main_params: A dictionary containing formatted weather parameters 
-                     (output from get_main_params).
+    for location_key in location_keys:
+        url = f"http://dataservice.accuweather.com/forecasts/v1/daily/5day/{location_key}?apikey={WEATHER_API_KEY}&details=true"
+        response = requests.get(url)
+        response.raise_for_status()
+        data = response.json()
+        day3_forecast.append(data[:3])
 
-    Returns:
-        A formatted string describing the weather, including an assessment of 
-        whether conditions are favorable or unfavorable.
-    """
-    
-    result_str = ""
-
-    result_str += f'Температура: {main_params["temp"]}C \n'
-    result_str += f'Ощущается как: {main_params["feel_temp"]}C \n'
-    result_str += f'Погода: {main_params["weather_text"]} \n'
-    result_str += f'Осадки: {main_params["precipitation"]} \n'
-    result_str += f'Относительная влажность: {main_params["humidity"]}% \n'
-    result_str += f'Скорость ветра: {main_params["wind_speed"]} м/c \n'
-    result_str += f'Направление ветра: {main_params["direction"]} \n'
-    result_str += f'Давление: {main_params["pressure"]} мм.рт.ст \n'
+    return day3_forecast
 
 
-def write_to_file(data):
-    with open('1.json', 'w', encoding='utf-8') as f:
+def write_to_file(data, filename):
+    with open(filename, 'w', encoding='utf-8') as f:
         json.dump(data, f)
+
+
+def read_file(filename):
+    with open(filename, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    return data
