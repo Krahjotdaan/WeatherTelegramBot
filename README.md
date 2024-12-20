@@ -26,7 +26,7 @@
 
     ```bash
     git clone https://github.com/Krahjotdaan/WeatherTelegramBot.git
-    cd your-repo-name
+    cd WeatherTelegramBot
     ```
 
 2.  **Установка зависимостей:**
