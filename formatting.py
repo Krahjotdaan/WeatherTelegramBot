@@ -1,4 +1,16 @@
 def get_current_main_params(data: list):
+    """
+    Extracts and processes key weather parameters from current conditions data.
+
+    Args:
+        data: A list of lists, where each inner list contains a single dictionary
+              representing current weather conditions.
+
+    Returns:
+        A list of dictionaries, each containing formatted weather parameters
+        such as date, temperature, weather description, precipitation status,
+        humidity, and wind speed.
+    """
     main_params_list = []
 
     for item in data:
@@ -18,6 +30,18 @@ def get_current_main_params(data: list):
 
 
 def get_1day_forecast_main_params(data: list):
+    """
+    Extracts and processes key weather parameters from a 1-day forecast data.
+
+    Args:
+        data: A list of dictionaries, where each dictionary contains a key
+              'DailyForecasts' which is a list of daily forecast data.
+
+    Returns:
+        A list of dictionaries, each containing formatted weather parameters
+        for the first day in the forecast, such as date, temperature, weather
+        description, precipitation type, humidity, and wind speed.
+    """
     main_params_list = []
 
     for item in data:
@@ -45,6 +69,18 @@ def get_1day_forecast_main_params(data: list):
     
 
 def get_3days_forecast_main_params(data: list):
+    """
+    Extracts and processes key weather parameters from a 3-day forecast data.
+
+    Args:
+        data: A list of dictionaries, where each dictionary contains a key
+              'DailyForecasts' which is a list of daily forecast data.
+
+    Returns:
+        A list of dictionaries, each containing formatted weather parameters
+        for the first three days in the forecast, such as date, temperature,
+        weather description, precipitation type, humidity, and wind speed.
+    """
     main_params_list = []
 
     for item in data:
@@ -75,6 +111,18 @@ def get_3days_forecast_main_params(data: list):
 
 
 def get_result_str(main_params_list: list):
+    """
+     Formats a list of weather parameters dictionaries into a list of strings.
+
+    Args:
+        main_params_list: A list of dictionaries, where each dictionary contains
+                         formatted weather parameters (e.g., date, temperature,
+                         weather description, precipitation, humidity, and
+                         wind speed).
+
+    Returns:
+        A list of strings, where each string represents formatted weather data.
+    """
     results = []
 
     for data in main_params_list:
