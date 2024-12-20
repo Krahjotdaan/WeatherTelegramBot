@@ -1,0 +1,710 @@
+[
+  {
+    "Headline": {
+      "EffectiveDate": "2024-12-20T01:00:00+03:00",
+      "EffectiveEpochDate": 1734645600,
+      "Severity": 3,
+      "Text": "Some ice late Thursday night",
+      "Category": "snow",
+      "EndDate": "2024-12-20T07:00:00+03:00",
+      "EndEpochDate": 1734667200,
+      "MobileLink": "http://www.accuweather.com/en/ru/moscow/294021/daily-weather-forecast/294021?lang=en-us",
+      "Link": "http://www.accuweather.com/en/ru/moscow/294021/daily-weather-forecast/294021?lang=en-us"
+    },
+    "DailyForecasts": [
+      {
+        "Date": "2024-12-19T07:00:00+03:00",
+        "EpochDate": 1734580800,
+        "Sun": {
+          "Rise": "2024-12-19T08:57:00+03:00",
+          "EpochRise": 1734587820,
+          "Set": "2024-12-19T15:57:00+03:00",
+          "EpochSet": 1734613020
+        },
+        "Moon": {
+          "Rise": "2024-12-19T20:33:00+03:00",
+          "EpochRise": 1734629580,
+          "Set": "2024-12-20T12:09:00+03:00",
+          "EpochSet": 1734685740,
+          "Phase": "WaningGibbous",
+          "Age": 18
+        },
+        "Temperature": {
+          "Minimum": {
+            "Value": 19,
+            "Unit": "F",
+            "UnitType": 18
+          },
+          "Maximum": {
+            "Value": 21,
+            "Unit": "F",
+            "UnitType": 18
+          }
+        },
+        "RealFeelTemperature": {
+          "Minimum": {
+            "Value": 4,
+            "Unit": "F",
+            "UnitType": 18,
+            "Phrase": "Bitterly Cold"
+          },
+          "Maximum": {
+            "Value": 9,
+            "Unit": "F",
+            "UnitType": 18,
+            "Phrase": "Bitterly Cold"
+          }
+        },
+        "RealFeelTemperatureShade": {
+          "Minimum": {
+            "Value": 4,
+            "Unit": "F",
+            "UnitType": 18,
+            "Phrase": "Bitterly Cold"
+          },
+          "Maximum": {
+            "Value": 9,
+            "Unit": "F",
+            "UnitType": 18,
+            "Phrase": "Bitterly Cold"
+          }
+        },
+        "HoursOfSun": 6,
+        "DegreeDaySummary": {
+          "Heating": {
+            "Value": 45,
+            "Unit": "F",
+            "UnitType": 18
+          },
+          "Cooling": {
+            "Value": 0,
+            "Unit": "F",
+            "UnitType": 18
+          }
+        },
+        "AirAndPollen": [
+          {
+            "Name": "AirQuality",
+            "Value": 0,
+            "Category": "Good",
+            "CategoryValue": 1,
+            "Type": "Ozone"
+          },
+          {
+            "Name": "Grass",
+            "Value": 0,
+            "Category": "Low",
+            "CategoryValue": 1
+          },
+          {
+            "Name": "Mold",
+            "Value": 0,
+            "Category": "Low",
+            "CategoryValue": 1
+          },
+          {
+            "Name": "Ragweed",
+            "Value": 0,
+            "Category": "Low",
+            "CategoryValue": 1
+          },
+          {
+            "Name": "Tree",
+            "Value": 0,
+            "Category": "Low",
+            "CategoryValue": 1
+          },
+          {
+            "Name": "UVIndex",
+            "Value": 1,
+            "Category": "Low",
+            "CategoryValue": 1
+          }
+        ],
+        "Day": {
+          "Icon": 22,
+          "IconPhrase": "Snow",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Snow",
+          "PrecipitationIntensity": "Moderate",
+          "ShortPhrase": "Not as cold; p.m. snow, 1-2\"",
+          "LongPhrase": "Mostly cloudy and not as cold; snow at times this afternoon, accumulating an inch or two",
+          "PrecipitationProbability": 80,
+          "ThunderstormProbability": 0,
+          "RainProbability": 0,
+          "SnowProbability": 80,
+          "IceProbability": 0,
+          "Wind": {
+            "Speed": {
+              "Value": 6.9,
+              "Unit": "mi/h",
+              "UnitType": 9
+            },
+            "Direction": {
+              "Degrees": 181,
+              "Localized": "S",
+              "English": "S"
+            }
+          },
+          "WindGust": {
+            "Speed": {
+              "Value": 13.8,
+              "Unit": "mi/h",
+              "UnitType": 9
+            },
+            "Direction": {
+              "Degrees": 235,
+              "Localized": "SW",
+              "English": "SW"
+            }
+          },
+          "TotalLiquid": {
+            "Value": 0.16,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "Rain": {
+            "Value": 0,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "Snow": {
+            "Value": 1.44,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "Ice": {
+            "Value": 0,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "HoursOfPrecipitation": 4,
+          "HoursOfRain": 0,
+          "HoursOfSnow": 4,
+          "HoursOfIce": 0,
+          "CloudCover": 54,
+          "Evapotranspiration": {
+            "Value": 0,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "SolarIrradiance": {
+            "Value": 891.1,
+            "Unit": "W/m²",
+            "UnitType": 33
+          },
+          "RelativeHumidity": {
+            "Minimum": 77,
+            "Maximum": 87,
+            "Average": 85
+          },
+          "WetBulbTemperature": {
+            "Minimum": {
+              "Value": -4,
+              "Unit": "F",
+              "UnitType": 18
+            },
+            "Maximum": {
+              "Value": 17,
+              "Unit": "F",
+              "UnitType": 18
+            },
+            "Average": {
+              "Value": 8,
+              "Unit": "F",
+              "UnitType": 18
+            }
+          },
+          "WetBulbGlobeTemperature": {
+            "Minimum": {
+              "Value": -4,
+              "Unit": "F",
+              "UnitType": 18
+            },
+            "Maximum": {
+              "Value": 18,
+              "Unit": "F",
+              "UnitType": 18
+            },
+            "Average": {
+              "Value": 9,
+              "Unit": "F",
+              "UnitType": 18
+            }
+          }
+        },
+        "Night": {
+          "Icon": 24,
+          "IconPhrase": "Ice",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Mixed",
+          "PrecipitationIntensity": "Light",
+          "ShortPhrase": "Snow, then ice, up to 1\"",
+          "LongPhrase": "Not as cold with a coating to an inch of snow turning to ice this evening followed by a bit of ice on occasion late; storm total snowfall 1-3 inches",
+          "PrecipitationProbability": 100,
+          "ThunderstormProbability": 0,
+          "RainProbability": 0,
+          "SnowProbability": 74,
+          "IceProbability": 76,
+          "Wind": {
+            "Speed": {
+              "Value": 8.1,
+              "Unit": "mi/h",
+              "UnitType": 9
+            },
+            "Direction": {
+              "Degrees": 179,
+              "Localized": "S",
+              "English": "S"
+            }
+          },
+          "WindGust": {
+            "Speed": {
+              "Value": 18.4,
+              "Unit": "mi/h",
+              "UnitType": 9
+            },
+            "Direction": {
+              "Degrees": 191,
+              "Localized": "S",
+              "English": "S"
+            }
+          },
+          "TotalLiquid": {
+            "Value": 0.07,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "Rain": {
+            "Value": 0,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "Snow": {
+            "Value": 0.45,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "Ice": {
+            "Value": 0.04,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "HoursOfPrecipitation": 6,
+          "HoursOfRain": 0,
+          "HoursOfSnow": 3,
+          "HoursOfIce": 6,
+          "CloudCover": 97,
+          "Evapotranspiration": {
+            "Value": 0,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "SolarIrradiance": {
+            "Value": 0,
+            "Unit": "W/m²",
+            "UnitType": 33
+          },
+          "RelativeHumidity": {
+            "Minimum": 88,
+            "Maximum": 100,
+            "Average": 95
+          },
+          "WetBulbTemperature": {
+            "Minimum": {
+              "Value": 18,
+              "Unit": "F",
+              "UnitType": 18
+            },
+            "Maximum": {
+              "Value": 29,
+              "Unit": "F",
+              "UnitType": 18
+            },
+            "Average": {
+              "Value": 23,
+              "Unit": "F",
+              "UnitType": 18
+            }
+          },
+          "WetBulbGlobeTemperature": {
+            "Minimum": {
+              "Value": 19,
+              "Unit": "F",
+              "UnitType": 18
+            },
+            "Maximum": {
+              "Value": 29,
+              "Unit": "F",
+              "UnitType": 18
+            },
+            "Average": {
+              "Value": 24,
+              "Unit": "F",
+              "UnitType": 18
+            }
+          }
+        },
+        "Sources": [
+          "AccuWeather"
+        ],
+        "MobileLink": "http://www.accuweather.com/en/ru/moscow/294021/daily-weather-forecast/294021?lang=en-us",
+        "Link": "http://www.accuweather.com/en/ru/moscow/294021/daily-weather-forecast/294021?lang=en-us"
+      }
+    ]
+  },
+  {
+    "Headline": {
+      "EffectiveDate": "2024-12-20T13:00:00+03:00",
+      "EffectiveEpochDate": 1734688800,
+      "Severity": 3,
+      "Text": "Snow and ice from Friday afternoon into late Friday night will total up to a coating",
+      "Category": "snow/ice",
+      "EndDate": "2024-12-21T07:00:00+03:00",
+      "EndEpochDate": 1734753600,
+      "MobileLink": "http://www.accuweather.com/en/ru/kazan/295954/daily-weather-forecast/295954?lang=en-us",
+      "Link": "http://www.accuweather.com/en/ru/kazan/295954/daily-weather-forecast/295954?lang=en-us"
+    },
+    "DailyForecasts": [
+      {
+        "Date": "2024-12-19T07:00:00+03:00",
+        "EpochDate": 1734580800,
+        "Sun": {
+          "Rise": "2024-12-19T08:11:00+03:00",
+          "EpochRise": 1734585060,
+          "Set": "2024-12-19T15:11:00+03:00",
+          "EpochSet": 1734610260
+        },
+        "Moon": {
+          "Rise": "2024-12-19T19:44:00+03:00",
+          "EpochRise": 1734626640,
+          "Set": "2024-12-20T11:24:00+03:00",
+          "EpochSet": 1734683040,
+          "Phase": "WaningGibbous",
+          "Age": 18
+        },
+        "Temperature": {
+          "Minimum": {
+            "Value": 3,
+            "Unit": "F",
+            "UnitType": 18
+          },
+          "Maximum": {
+            "Value": 25,
+            "Unit": "F",
+            "UnitType": 18
+          }
+        },
+        "RealFeelTemperature": {
+          "Minimum": {
+            "Value": -4,
+            "Unit": "F",
+            "UnitType": 18,
+            "Phrase": "Bitterly Cold"
+          },
+          "Maximum": {
+            "Value": 24,
+            "Unit": "F",
+            "UnitType": 18,
+            "Phrase": "Very Cold"
+          }
+        },
+        "RealFeelTemperatureShade": {
+          "Minimum": {
+            "Value": -4,
+            "Unit": "F",
+            "UnitType": 18,
+            "Phrase": "Bitterly Cold"
+          },
+          "Maximum": {
+            "Value": 24,
+            "Unit": "F",
+            "UnitType": 18,
+            "Phrase": "Very Cold"
+          }
+        },
+        "HoursOfSun": 1,
+        "DegreeDaySummary": {
+          "Heating": {
+            "Value": 51,
+            "Unit": "F",
+            "UnitType": 18
+          },
+          "Cooling": {
+            "Value": 0,
+            "Unit": "F",
+            "UnitType": 18
+          }
+        },
+        "AirAndPollen": [
+          {
+            "Name": "AirQuality",
+            "Value": 0,
+            "Category": "Good",
+            "CategoryValue": 1,
+            "Type": "Ozone"
+          },
+          {
+            "Name": "Grass",
+            "Value": 0,
+            "Category": "Low",
+            "CategoryValue": 1
+          },
+          {
+            "Name": "Mold",
+            "Value": 0,
+            "Category": "Low",
+            "CategoryValue": 1
+          },
+          {
+            "Name": "Ragweed",
+            "Value": 0,
+            "Category": "Low",
+            "CategoryValue": 1
+          },
+          {
+            "Name": "Tree",
+            "Value": 0,
+            "Category": "Low",
+            "CategoryValue": 1
+          },
+          {
+            "Name": "UVIndex",
+            "Value": 0,
+            "Category": "Low",
+            "CategoryValue": 1
+          }
+        ],
+        "Day": {
+          "Icon": 19,
+          "IconPhrase": "Flurries",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Snow",
+          "PrecipitationIntensity": "Light",
+          "ShortPhrase": "Cloudy with a bit of snow",
+          "LongPhrase": "Cloudy with a bit of snow with little or no accumulation",
+          "PrecipitationProbability": 80,
+          "ThunderstormProbability": 0,
+          "RainProbability": 0,
+          "SnowProbability": 80,
+          "IceProbability": 0,
+          "Wind": {
+            "Speed": {
+              "Value": 6.9,
+              "Unit": "mi/h",
+              "UnitType": 9
+            },
+            "Direction": {
+              "Degrees": 296,
+              "Localized": "WNW",
+              "English": "WNW"
+            }
+          },
+          "WindGust": {
+            "Speed": {
+              "Value": 16.1,
+              "Unit": "mi/h",
+              "UnitType": 9
+            },
+            "Direction": {
+              "Degrees": 282,
+              "Localized": "WNW",
+              "English": "WNW"
+            }
+          },
+          "TotalLiquid": {
+            "Value": 0.02,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "Rain": {
+            "Value": 0,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "Snow": {
+            "Value": 0.17,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "Ice": {
+            "Value": 0,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "HoursOfPrecipitation": 1,
+          "HoursOfRain": 0,
+          "HoursOfSnow": 1,
+          "HoursOfIce": 0,
+          "CloudCover": 98,
+          "Evapotranspiration": {
+            "Value": 0,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "SolarIrradiance": {
+            "Value": 45.8,
+            "Unit": "W/m²",
+            "UnitType": 33
+          },
+          "RelativeHumidity": {
+            "Minimum": 69,
+            "Maximum": 95,
+            "Average": 85
+          },
+          "WetBulbTemperature": {
+            "Minimum": {
+              "Value": 17,
+              "Unit": "F",
+              "UnitType": 18
+            },
+            "Maximum": {
+              "Value": 23,
+              "Unit": "F",
+              "UnitType": 18
+            },
+            "Average": {
+              "Value": 20,
+              "Unit": "F",
+              "UnitType": 18
+            }
+          },
+          "WetBulbGlobeTemperature": {
+            "Minimum": {
+              "Value": 18,
+              "Unit": "F",
+              "UnitType": 18
+            },
+            "Maximum": {
+              "Value": 25,
+              "Unit": "F",
+              "UnitType": 18
+            },
+            "Average": {
+              "Value": 21,
+              "Unit": "F",
+              "UnitType": 18
+            }
+          }
+        },
+        "Night": {
+          "Icon": 19,
+          "IconPhrase": "Flurries",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Snow",
+          "PrecipitationIntensity": "Moderate",
+          "ShortPhrase": "Colder with low clouds",
+          "LongPhrase": "Colder with low clouds",
+          "PrecipitationProbability": 55,
+          "ThunderstormProbability": 0,
+          "RainProbability": 0,
+          "SnowProbability": 55,
+          "IceProbability": 0,
+          "Wind": {
+            "Speed": {
+              "Value": 5.8,
+              "Unit": "mi/h",
+              "UnitType": 9
+            },
+            "Direction": {
+              "Degrees": 241,
+              "Localized": "WSW",
+              "English": "WSW"
+            }
+          },
+          "WindGust": {
+            "Speed": {
+              "Value": 13.8,
+              "Unit": "mi/h",
+              "UnitType": 9
+            },
+            "Direction": {
+              "Degrees": 278,
+              "Localized": "W",
+              "English": "W"
+            }
+          },
+          "TotalLiquid": {
+            "Value": 0.04,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "Rain": {
+            "Value": 0,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "Snow": {
+            "Value": 0.5,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "Ice": {
+            "Value": 0,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "HoursOfPrecipitation": 2,
+          "HoursOfRain": 0,
+          "HoursOfSnow": 2,
+          "HoursOfIce": 0,
+          "CloudCover": 98,
+          "Evapotranspiration": {
+            "Value": 0,
+            "Unit": "in",
+            "UnitType": 1
+          },
+          "SolarIrradiance": {
+            "Value": 0,
+            "Unit": "W/m²",
+            "UnitType": 33
+          },
+          "RelativeHumidity": {
+            "Minimum": 74,
+            "Maximum": 91,
+            "Average": 80
+          },
+          "WetBulbTemperature": {
+            "Minimum": {
+              "Value": 2,
+              "Unit": "F",
+              "UnitType": 18
+            },
+            "Maximum": {
+              "Value": 15,
+              "Unit": "F",
+              "UnitType": 18
+            },
+            "Average": {
+              "Value": 8,
+              "Unit": "F",
+              "UnitType": 18
+            }
+          },
+          "WetBulbGlobeTemperature": {
+            "Minimum": {
+              "Value": 3,
+              "Unit": "F",
+              "UnitType": 18
+            },
+            "Maximum": {
+              "Value": 16,
+              "Unit": "F",
+              "UnitType": 18
+            },
+            "Average": {
+              "Value": 9,
+              "Unit": "F",
+              "UnitType": 18
+            }
+          }
+        },
+        "Sources": [
+          "AccuWeather"
+        ],
+        "MobileLink": "http://www.accuweather.com/en/ru/kazan/295954/daily-weather-forecast/295954?lang=en-us",
+        "Link": "http://www.accuweather.com/en/ru/kazan/295954/daily-weather-forecast/295954?lang=en-us"
+      }
+    ]
+  }
+]

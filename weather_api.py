@@ -53,7 +53,7 @@ def get_3days_forecast(location_keys):
         response = requests.get(url)
         response.raise_for_status()
         data = response.json()
-        day3_forecast.append(data[:3])
+        day3_forecast.append(data)
 
     return day3_forecast
 

@@ -47,40 +47,78 @@ async def weather_command(message: types.Message):
 @dp.message(Command(commands=["current"]))
 async def current_weather(message: types.Message, state: FSMContext):
     await state.update_data(command='current')
-    await message.answer("Введите начальную точку")
+    await message.answer("Введите начальную точку на английском")
     await state.set_state(Form.start_point)
 
 
 @dp.message(Command(commands=["1day"]))
 async def day1_weather(message: types.Message, state: FSMContext):
-    await state.update_data(command='current')
-    await message.answer("Введите начальную точку")
+    await state.update_data(command='1day')
+    await message.answer("Введите начальную точку на английском")
     await state.set_state(Form.start_point)
 
 
 @dp.message(Command(commands=["3days"]))
 async def days3_weather(message: types.Message, state: FSMContext):
-    await state.update_data(command='current')
-    await message.answer("Введите начальную точку")
+    await state.update_data(command='3days')
+    await message.answer("Введите начальную точку на английском")
     await state.set_state(Form.start_point)
 
 
 @dp.message(Form.start_point)
 async def process_start_point(message: types.Message, state: FSMContext):
     await state.update_data(start_point=message.text)
-    await message.answer("Введите конечную точку")
+    await message.answer("Введите конечную точку на английском")
     await state.set_state(Form.end_point)
 
 
 @dp.message(Form.end_point)
 async def process_end_point(message: types.Message, state: FSMContext):
     await state.update_data(end_point=message.text)
-    s = await state.get_data()
-    await message.answer(', '.join([s.get('start_point'), s.get('end_point')]))
+
+    api_type = await state.get_value('command')
+    start_point = await state.get_value('start_point')
+    end_point = await state.get_value('end_point')
+
+    location_keys = get_location_keys([start_point, end_point])
+    
+    if api_type == 'current':
+        data = get_current_weather(location_keys)
+        main_params = get_current_main_params(data)
+        strs = get_result_str(main_params)
+
+        start_line = start_point + '\n' + strs[0]
+        end_line = end_point + '\n' + strs[1]
+
+        await message.answer(start_line)
+        await message.answer(end_line)
+
+    elif api_type == '1day':
+        data = get_1day_forecast(location_keys)
+        main_params = get_1day_forecast_main_params(data)
+        strs = get_result_str(main_params)
+
+        start_line = start_point + '\n' + strs[0]
+        end_line = end_point + '\n' + strs[1]
+
+        await message.answer(start_line)
+        await message.answer(end_line)
+
+    elif api_type == '3days':
+        data = get_3days_forecast(location_keys)
+        main_params = get_3days_forecast_main_params(data)
+        strs = get_result_str(main_params)
+
+        start_line = start_point + '\n' + '\n'.join(strs[:3])
+        end_line = end_point + '\n' + '\n'.join(strs[:-3])
+
+        await message.answer(start_line)
+        await message.answer(end_line)
+
     await state.clear()
 
 
-@dp.message(F.text != '/current' and F.text != '/1day' and F.text != '/3days')
+@dp.message()
 async def handle_unrecognized_message(message: types.Message):
     await message.answer('Извините, я не понял ваш запрос')
 
